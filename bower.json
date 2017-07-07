@@ -1,0 +1,18 @@
+{
+  "name": "workoutlogangular",
+  "description": "",
+  "main": "app.js",
+  "authors": [
+    "Adam Jayne"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
