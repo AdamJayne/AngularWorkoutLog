@@ -25,7 +25,7 @@ gulp.task('watch', function(){
 
 gulp.task('start-webserver', function(){
 	connect.server({ root: '.'});
-})
+});
 
 //  Default task when 'gulp' runs: bundle, starts web servver, then watches for changes
 gulp.task('default', ['bundle', 'start-webserver', 'watch']);

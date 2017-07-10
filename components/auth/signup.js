@@ -3,7 +3,7 @@
 		.module('workoutlog.auth.signup', ['ui.router'])
 		.config(signupConfig);
 
-		function signupConfig($stateProvider){
+		function signupConfig($stateProvider) {
 			$stateProvider
 				.state('signup', {
 					url: '/signup',
@@ -12,20 +12,21 @@
 					controllerAs: 'ctrl',
 					bindToController: this
 				});
-		}
+		};
 
 		signupConfig.$inject = ['$stateProvider'];
 
-		function SignUpController($state, UserService) {
+		function SignUpController($state, UserService){
 			var vm = this;
 			vm.user = {};
-			vm.message = "Sign up for an account!"
-			vm.submit = function() {
+			vm.message = "Sign up for an account!";
+			vm.submit = function(){
 				UserService.create(vm.user).then(function(response){
-					$state.go('define')
+						console.log(response);
+						$state.go('define');
 				});
 			};
-		}
+		};
 
 		SignUpController.$inject = ['$state', 'UserService'];
 })();

@@ -2,10 +2,10 @@
 	angular.module('workoutlog')
 		.service('SessionToken', ['$window', function($window){
 			function SessionToken(){
-				this.sessionToken = $window.localStorage.getItem('sessionToken');
-			}
+				this.sessionToken = $window.localStorage.getItem('sessionToken');;
+			};
 
-			SessionToken.prototype.set = function(token){
+			SessionToken.prototype.set = function(token) {
 				this.sessionToken = token;
 				$window.localStorage.setItem('sessionToken', token);
 			};
@@ -15,9 +15,9 @@
 			};
 
 			SessionToken.prototype.clear = function(){
-				this.SessionToken = undefined;
+				this.sessionToken = undefined;
 				$window.localStorage.removeItem('sessionToken');
 			};
 			return new SessionToken();
-		}])
-})
+		}]);
+})();
